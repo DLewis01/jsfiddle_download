@@ -1,0 +1,11 @@
+#!/bin/sh
+
+read -p 'fiddle_id: ' fiddle_id
+
+
+
+fiddleId=fiddle_id
+
+curl "http://fiddle.jshell.net/${fiddleId}/show/" -H "Referer: http://fiddle.jshell.net/${fiddleId}/" --output "${fiddleId}.html"
+
+echo "output to "${fiddleId}".html"
